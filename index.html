@@ -13,7 +13,7 @@
       app_argument = null;
 
   // exclude iPad
-  if(!is_iPad) {
+ // if(!is_iPad) {
     var meta = $("<meta>"), content = 'app-id=' + app_id;
     meta.attr('name', 'apple-itunes-app');
 
@@ -24,6 +24,6 @@
     // Apply
     meta.attr('content', content);
     $('head').append(meta);
-  }
+ // }
 }(jQuery));
 </script>
