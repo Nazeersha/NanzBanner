@@ -1,9 +1,31 @@
 <html>
     <head>
-        <meta name="apple-itunes-app" content="app-id=498483038">
+        
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     </head>
     <body>
       <p>hai gueey</p>	
+	    (function($){
+  var is_iPad = navigator.userAgent.match(/iPad/i) != null;
+
+  // Fill in your Apple-App stuff here
+  var app_id = "498483038",
+      affiliate_data = null,
+      app_argument = null;
+
+  // exclude iPad
+  if(!is_iPad) {
+    var meta = $("<meta>"), content = 'app-id=' + app_id;
+    meta.attr('name', 'apple-itunes-app');
+
+    // Optional stuff (only when filled in)
+    if(affiliate_data) content += ', affiliate-data=' + affiliate_data;
+    if(app_argument) content += ', app-argument=' + app_argument;
+
+    // Apply
+    meta.attr('content', content);
+    $('head').append(meta);
+  }
+}(jQuery));
 	</body>
 </html>
