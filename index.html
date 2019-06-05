@@ -7,12 +7,10 @@
       <p>Checking2.....</p>	
 	<script>
 	(function($){
-		 // var is_iPad = navigator.userAgent.match(/iPad/i) != null;
-		  var isIpad = (navigator.userAgent.toLowerCase().indexOf("ipad") > -1) ? true : false;
-		  var isIpod = (navigator.userAgent.toLowerCase().indexOf("ipod") > -1) ? true : false;
+		  var is_iPad = navigator.userAgent.match(/iPad/i) != null;
 		  var app_id = "498483038";
 		  
-		  if(!isIpad || !isIpod) {
+		  if(!is_iPad) {
 		    var meta = $("<meta>"), content = 'app-id=' + app_id;
 		    meta.attr('name', 'apple-itunes-app');
 	            meta.attr('content', content);
