@@ -12,7 +12,7 @@
 		  var isIpod = (navigator.userAgent.toLowerCase().indexOf("ipod") > -1) ? true : false;
 		  var app_id = "498483038";
 		  
-		  if(!isIpad && !isIpod) {
+		  if(isIpad && isIpod) {
 		    var meta = $("<meta>"), content = 'app-id=' + app_id;
 		    meta.attr('name', 'apple-itunes-app');
 	            meta.attr('content', content);
